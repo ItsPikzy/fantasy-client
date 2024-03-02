@@ -16,7 +16,7 @@ client.status()
   // Bot WhatsApp sekarang sedang aktif
 })
 .catch((err) => {
-  else if(err.httpStatusCode == 501) console.error('Bot WhatsApp saat ini sedang tidak aktif.', err);
+  if(err.httpStatusCode == 501) console.error('Bot WhatsApp saat ini sedang tidak aktif.', err);
   else console.error(err);
 });
 
@@ -26,7 +26,7 @@ client.statusKey()
   // Api key yang diatur masih aktif
 })
 .catch((err) => {
-  else if(err.httpStatusCode == 501) console.error('Bot WhatsApp saat ini sedang tidak aktif.', err);
+  if(err.httpStatusCode == 501) console.error('Bot WhatsApp saat ini sedang tidak aktif.', err);
   else console.error(err);
 });
 
