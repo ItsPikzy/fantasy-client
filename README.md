@@ -90,15 +90,15 @@ status()
 statusKey()
 
 // return WhatsApp API /sendMessage response as Promise of Object
-sendMessage(parameter)
+sendMessage(phoneNumber, message)
 ```
-`parameter` is Object or String of JSON of [WhatsApp Parameter](https://docs.rmtid.xyz/whatsapp/#json-objects)
+`phoneNumber` & `message` is an object JSON of [WhatsApp Parameter](https://docs.rmtid.xyz/whatsapp/#json-objects)
 
 ## 3. Handling Error / Exception
 When using function that result in WhatsApp API call e.g: `whatsAppApi.sendMessage(...)` 
 there's a chance it may throw error (`FantasyError` object), the error object will contains below properties that can be used as information to your error handling logic:
 ```javascript
-whatsAppApi.sendMessage(parameter)
+whatsAppApi.sendMessage(phoneNumber, message)
 .then((res)=>{
   ///
 })
