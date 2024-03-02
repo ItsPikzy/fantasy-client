@@ -6,7 +6,7 @@
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/ItsPikzy/fantasy-nodejs-client.git"
+    "url": "git+https://github.com/ItsPikzy/fantasy-nodejs-client.git"
   },
   "homepage": "https://github.com/ItsPikzy/fantasy-nodejs-client",
   "bugs": {
@@ -22,7 +22,7 @@
   "author": "admin@rmtid.xyz",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.26.0",
+    "axios": "^1.6.7",
     "lodash": "^4.17.21"
   }
 }
