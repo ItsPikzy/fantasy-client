@@ -44,10 +44,21 @@ client.phoneIsActive(phoneNumber)
 client.sendMessage(phoneNumber, 'Apakah kamu menyukaiku?\nCrush :D')
 .then((response) => {
   console.log(response); // objek JSON
-  // Berhasil mengirim pesan yang diberikan
+  // Pesan berhasil ditambahkan kedalam antrian server
 })
 .catch((err) => {
   if(err.httpStatusCode == 408) console.error(`Nomor telepon ${phoneNumber} terdeteksi tidak aktif.`, err);
   else if(err.httpStatusCode == 501) console.error('Bot WhatsApp saat ini sedang tidak aktif.', err);
+  else console.error(err);
+});
+
+
+client.sendMessage(queueId)
+.then((response) => {
+  console.log(response); // objek JSON
+  // Pesan ditemukan
+})
+.catch((err) => {
+  if(err.httpStatusCode == 501) console.error('Bot WhatsApp saat ini sedang tidak aktif.', err);
   else console.error(err);
 });
