@@ -3,3 +3,4 @@
 .flowconfig
 .sublime-project
 /examples/whatsapp/node_modules
+.run
