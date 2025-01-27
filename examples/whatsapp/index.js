@@ -1,4 +1,4 @@
-const fantasyClient = require('fantasy-client');
+const fantasyClient = require('../../../index.js');
 
 // Setel Kunci WhatsApp Anda
 // Anda dapat menemukannya di Situs Web Fantasy RMT -> WhatsApp -> Api Key
